@@ -1,0 +1,29 @@
+<?php
+<%
+def json_to_php(json)
+  result = json
+  @placeholders.each do |name, value|
+    result = result.gsub(name, value)
+  end
+  return %x[result='#{result}'; php -r "var_export(json_decode('${result}', true));"]
+end
+
+if @default_settings != nil
+  %>
+include("<%=@default_settings%>");<%
+end
+
+if @settings != nil
+  @settings.each do |name, config|
+    %>    
+$<%=name%>=<%=json_to_php config.to_json%>;<%
+  end
+end
+
+if @includes != nil
+  @includes.each do |include| 
+    %>
+include("<%=include%>");<%
+  end
+end
+%>

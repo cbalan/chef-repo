@@ -1,0 +1,39 @@
+{
+  "conflicting": {
+
+  },
+  "platforms": {
+
+  },
+  "description": "Configures magento",
+  "recipes": {
+
+  },
+  "providing": {
+
+  },
+  "maintainer": "Catalin Balan",
+  "replacing": {
+
+  },
+  "maintainer_email": "catalin.balan@gmail.com",
+  "version": "0.0.1",
+  "groupings": {
+
+  },
+  "attributes": {
+
+  },
+  "recommendations": {
+
+  },
+  "license": "All rights reserved",
+  "name": "magento",
+  "suggestions": {
+
+  },
+  "dependencies": {
+
+  },
+  "long_description": "= DESCRIPTION:\n\n= REQUIREMENTS:\n\n= ATTRIBUTES:\n\n= USAGE:\n\n"
+}

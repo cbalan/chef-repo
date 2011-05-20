@@ -1,0 +1,8 @@
+<%
+require "xmlsimple"
+xs = XmlSimple.new({'noattr' => true, 'rootname'=>'config', 'noescape' => true})
+local_xml = xs.xml_out(JSON.parse(@local.to_json))
+@placeholders.each do |name, value|
+  local_xml = local_xml.gsub(name, value)
+end %>
+<%= local_xml %>
